@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-sm fixed-top p-0">
-  <div class="container-fluid mobile-fluid">
+<nav class="navbar navbar-expand-sm fixed-top p-0 top">
+  <div class="container-fluid mobile-fluid pe-0">
     <span class="navbar-brand p-0 m-0" href="#">
-      <img class="image" [src]="logo" width="70" /><span class="title fw-bold text-lowercase"><b>{{ projectName
-          }}</b></span>
+      <img class="image" [src]="logo" width="70" /><small><b>{{ projectName }}</b>
+        </small>
     </span>
     <button (click)="onToggleButton()" class="navbar-toggler px-2" id="humbreger-btn" type="button"
       data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -22,10 +22,17 @@
 
     <div class="collapse navbar-collapse ps-5 ms-4 py-0 m-0" id="navbarSupportedContent1">
       <ul class="navbar-nav d-flex align-items-center ms-auto">
-        <rds-dropdownlist [placeholder]="'Languages'" [value]="selectedLanguage.language" [icon]="selectedLanguage.icon" [iconHeight]="'18px'" [iconWidth]="'18px'"
+        <!-- <rds-dropdownlist [placeholder]="'Languages'" [value]="selectedLanguage.language" [icon]="selectedLanguage.icon" [iconHeight]="'18px'" [iconWidth]="'18px'"
           [listItems]="languageItems" (onSelect)="onLanguageSelect($event)">
-        </rds-dropdownlist>
-        <li class="nav-item dropdown border-end px-2">
+        </rds-dropdownlist> -->
+        <li class="nav-item px-3">
+          <rds-button [size]="'small'" [roundedButton]="true" (click)="redirectToSettings()">
+            <span>
+              <rds-icon name="gear_settings" width="20px" height="20px"></rds-icon>
+            </span>
+          </rds-button>
+        </li>
+        <li class="nav-item dropdown px-3">
           <a class="nav-link py-0" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             <span>
@@ -50,13 +57,7 @@
             <mfe-loader [config]="rdsNotoficationMfeConfig"></mfe-loader>
           </div>
         </li>
-        <li class="nav-item border-end px-2">
-          <rds-button [size]="'small'" [roundedButton]="true" (click)="redirectToSettings()">
-            <span>
-              <rds-icon name="gear_settings" width="20px" height="20px"></rds-icon>
-            </span>
-          </rds-button>
-        </li>
+       
       </ul>
     </div>
     <div class="mobile-ms">
@@ -86,12 +87,12 @@
               <rds-avatar [WithProfilePic]="true" [profilePic]="profilePic" [Size]="'small'"></rds-avatar>
             </div>
             <div class="pe-auto">
-              <a class="text-decoration-none" (click)="redirect('profile')">
+             
                 <span class="dropdown-toggle">{{ UserRole }}</span>
-                <p class="mb-0 text-center text-muted user-role">
+                <p class="mb-0 text-muted user-role">
                   {{ profileData.userName }}
                 </p>
-              </a>
+             
             </div>
           </div>
         </li>
@@ -99,7 +100,7 @@
     </div>
   </div>
 </nav>
-<app-rds-comp-profile [MenuItems]="navtabItems" [linkedAccount]="linkedAccount" [Profileurl]="profilePic"
+<!-- <app-rds-comp-profile [MenuItems]="navtabItems" [linkedAccount]="linkedAccount" [Profileurl]="profilePic"
   [viewCanvas]="showOffcanvas" [tableWidth]="tableWidth" [id]="offCanvasId" [userList]="userList"
   [languageItems]="languageItems" [listItemsResult]="listusename" [DownloadTable]="dounloadata"
   [tableStyle]="tableStyle" [LoginAttempts]="LoginAttempts" [ProfileData]="profileData"
@@ -109,4 +110,4 @@
   (ondeleteLinkaccount)="deleteLinkaccount.emit($event)" (onLinkToUser)="saveLinkUsers($event)"
   (onProfileSave)="onProfileSave.emit($event)" (onLoginAttempts)="onLoginAttemptsRefresh.emit($event)"
   (onDownloadLink)="onDownloadLink.emit($event)">
-</app-rds-comp-profile>
+</app-rds-comp-profile> -->

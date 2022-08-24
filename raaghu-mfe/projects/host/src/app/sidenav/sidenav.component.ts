@@ -71,31 +71,21 @@ export class SidenavComponent extends MfeBaseComponent implements OnInit {
   @Input() AccountLinkedTable: any = [];
 
   sidenavItemsOriginal: any = [
-    { label: 'Dashboard', labelTranslationKey: 'Dashboard', id: '', permissionName: 'Pages.Administration.Host.Dashboard', icon: 'dashboard', path: '/pages/dashboard', descriptionTranslationKey: 'Statistics and reports', description: 'Statistics and reports' },
+    { label: 'Home', labelTranslationKey: 'Home', id: '', permissionName: 'Pages.Administration.Host.Dashboard', icon: 'dashboard', path: '/pages/dashboard', descriptionTranslationKey: 'Home / Patient Records', description: 'Home / Patient Records' },
     { label: 'Dashboard', labelTranslationKey: 'Dashboard', id: '', permissionName: 'Pages.Tenant.Dashboard', icon: 'dashboard', path: '/pages/dashboard', description: 'Statistics and reports', descriptionTranslationKey: 'Statistics and reports' },
-    { label: 'Tenants', labelTranslationKey: 'Tenants', id: 'tenants', permissionName: 'Pages.Tenants', icon: 'tenant', path: '/pages/tenant', description: 'Manage your tenants', descriptionTranslationKey: 'Manage your tenants' },
-    { label: 'Editions', labelTranslationKey: 'Editions', id: '', permissionName: 'Pages.Editions', icon: 'edition', path: '/pages/edition', description: 'Manage editions and features of the application', descriptionTranslationKey: 'Manage editions and features of the application' },
+    { label: 'Patients ', labelTranslationKey: 'Patients', id: '', permissionName: 'Pages.Tenants', icon: 'tenant', path: '/pages/dashboard', description: 'Home / Patient Records', descriptionTranslationKey: 'Home / Patient Records' },
+    { label: 'Surgeries', labelTranslationKey: 'Surgeries', id: '', permissionName: 'Pages.Editions', icon: 'edition', path: '/pages/edition', description: 'Home / Patient Records', descriptionTranslationKey: 'Home / Patient Records' },
+    { label: 'Orders', labelTranslationKey: 'Orders', id: '', permissionName: 'Pages.Editions', icon: 'edition', path: '/pages/edition', description: 'Home / Patient Records', descriptionTranslationKey: 'Home / Patient Records' },
     // { label: 'Api Scopes', id: 'ApiScope', permissionName: '', icon: 'settings', path: '/pages/apiScope', description: 'Home > Identity Server > Api Scope' },
 
     {
       label: 'Administration', labelTranslationKey: 'Administration', id: 'admin', permissionName: '', icon: 'administration', path: '',
       children: [
-        { label: 'Organization Units', labelTranslationKey: 'Organization Units', id: '', permissionName: 'Pages.Administration.OrganizationUnits', icon: 'organization_units', path: '/pages/organization-unit', description: 'Use organization units to organize users and entities', descriptionTranslationKey: 'Use organization units to organize users and entities' },
-        { label: 'Roles', labelTranslationKey: 'Roles', id: '', permissionName: 'Pages.Administration.Roles', icon: 'roles', path: '/pages/role', description: 'Use roles to group permissions', descriptionTranslationKey: 'Use roles to group permissions' },
-        { label: 'Users', labelTranslationKey: 'Users', id: '', permissionName: 'Pages.Administration.Users', icon: 'users', path: '/pages/user', description: 'Manage users and permissions', descriptionTranslationKey: 'Manage users and permissions' },
-        { label: 'Language', labelTranslationKey: 'Language', id: '', permissionName: 'Pages.Administration.Languages', icon: 'languages', path: '/pages/language', description: 'Manage user interface languages', descriptionTranslationKey: 'Statistics and reports' },
-        { label: 'Audit logs', labelTranslationKey: 'Audit logs', id: '', permissionName: 'Pages.Administration.AuditLogs', icon: 'audit_logs', path: '/pages/audit-logs', descriptionTranslationKey: '' },
-        { label: 'subscription', labelTranslationKey: 'subscription', id: '', permissionName: 'Pages.Administration.Tenant.SubscriptionManagement', icon: 'subscription', path: '/pages/subscription', descriptionTranslationKey: '' },
-        { label: 'Maintenance', labelTranslationKey: 'Maintenance', id: '', permissionName: 'Pages.Administration.Host.Maintenance', icon: 'maintenance', path: '/pages/maintenance', description: 'Statistics and reports', descriptionTranslationKey: 'Statistics and reports' },
-        { label: 'Visual Settings', labelTranslationKey: 'Visual Settings', id: '', permissionName: 'Pages.Administration.UiCustomization', icon: 'visual_settings', path: '/pages/visualsettings', description: 'Change the look of UI', descriptionTranslationKey: 'Change the look of UI' },
-        { label: 'Webhook Subscriptions', labelTranslationKey: 'Webhook Subscriptions', id: '', permissionName: 'Pages.Administration.WebhookSubscription', icon: 'webhook_subscriptions', path: '/pages/webhook-subscription', description: 'Webhook Subsubscription Info', descriptionTranslationKey: 'Statistics and reports' },
-        { label: 'Dynamic Properties', labelTranslationKey: 'Dynamic Properties', id: 'Pages.Administration.DynamicProperties', permissionName: '', icon: 'dynamic_properties', path: '/pages/dynamic-property-management', descriptionTranslationKey: '' },
-        { label: 'Settings', labelTranslationKey: 'Settings', id: '', permissionName: 'Pages.Administration.Host.Settings', icon: 'settings', path: '/pages/settings', description: 'Show and change application settings', descriptionTranslationKey: 'Show and change application settings' },
-        { label: 'Settings', labelTranslationKey: 'Settings', id: '', permissionName: 'Pages.Administration.Tenant.Settings', icon: 'settings', path: '/pages/settings', description: 'Show and change application settings', descriptionTranslationKey: 'Show and change application settings' },
-
+        { label: 'Surgery Template', labelTranslationKey: 'Surgery Template', id: '', permissionName: 'Pages.Administration.OrganizationUnits', icon: 'organization_units', path: '/pages/organization-unit', description: 'Home / Patient Records', descriptionTranslationKey: 'Home / Patient Records' },
+        { label: 'CPT Template', labelTranslationKey: 'CPT Template', id: '', permissionName: 'Pages.Administration.Roles', icon: 'roles', path: '/pages/role', description: 'Home / Patient Records', descriptionTranslationKey: 'Home / Patient Records' },
       ],
     },
-    { label: 'Demo UI Components', labelTranslationKey: 'Demo UI Components', id: '', permissionName: '', icon: 'demo_ui_components', path: '/pages/profile-settings', description: '', descriptionTranslationKey: '' },
+    // { label: 'Demo UI Components', labelTranslationKey: 'Demo UI Components', id: '', permissionName: '', icon: 'demo_ui_components', path: '/pages/profile-settings', description: '', descriptionTranslationKey: '' },
     // { label: 'Cart', labelTranslationKey: 'Cart', id: 'cart', permissionName: '' ,icon: 'tenant', path: '/pages/cart', description: 'Manage your cart', descriptionTranslationKey: 'Manage your cart' },
   ];
 
@@ -184,8 +174,8 @@ export class SidenavComponent extends MfeBaseComponent implements OnInit {
         profileData: this.profileData,
         rdsDeligateTableData: this.rdsDeligateTableData,
         offCanvasId: this.offCanvasId,
-        logo: 'assets/raaghu_icon.png',
-        projectName: 'Raaghu',
+        logo: '',
+        projectName: '',
         linkedAccounts: this.linkedAccount,
         userList: this.usernameList,
         notificationData: this.notifications,
@@ -423,7 +413,7 @@ export class SidenavComponent extends MfeBaseComponent implements OnInit {
 
   }
   redirectPath(event): void {
-    this.rdsTopNavigationMfeConfig.input.selectedMenu = event.label;
+    this.rdsTopNavigationMfeConfig.input.selectedMenu = event.label=== 'Patients'?'Patients Records':event.label;
     this.rdsTopNavigationMfeConfig.input.selectedMenuDescription = event.description;
     this.router.navigate([event.path]);
   }
