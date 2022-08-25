@@ -36,7 +36,8 @@ export class RdsSideNavComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  @Input() projectName: string = 'raaghu';
+  @Input() logo: string = 'assets/raaghu_icon.png';
   @Input() sidenavItems: SideNavItem[] = [];
   @Input() isPageWrapper: boolean = false;
   @Input() collapseRequired: boolean = true;
